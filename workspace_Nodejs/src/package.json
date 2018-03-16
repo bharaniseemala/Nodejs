@@ -1,0 +1,19 @@
+{
+  "name": "npm_demo",
+  "version": "1.0.0",
+  "description": "test ",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-gateway": "^1.7.2"
+  }
+}
