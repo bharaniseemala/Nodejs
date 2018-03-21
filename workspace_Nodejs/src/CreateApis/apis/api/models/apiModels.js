@@ -21,4 +21,38 @@ var TaskSchema = new Schema({
   }
 });
 
+var DispatchOrdersSchema = new Schema({
+  "DispatchOrders": {
+    "MarketPlace": "Myntra",
+    "orderId": "asds",
+    "orderItems": [{
+      "id": "zxZx",
+      "quantity": "0",
+      "invoiceNumber": "12345",
+      "invoiceDate": "2018-02-15T16:17:56+05:30",
+      "taxEntries": [{
+        "taxRate": "5.5",
+        "taxType": "CGST",
+        "unitTaxAmount": "26.02",
+        "unitTaxableAmount": "711.45"
+      }]
+    }]
+  }
+});
+
+var TaxEntries = new Schema({
+  taxRate: {
+    type: String
+  },
+  taxtype: {
+    type: String
+  },
+  unitTaxAmount: {
+    type: String
+  },
+  unittaxableAmount: {
+    type: String
+  }
+})
+
 module.exports = mongoose.model('Tasks', TaskSchema);
