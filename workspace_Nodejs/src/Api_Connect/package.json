@@ -1,0 +1,17 @@
+{
+  "name": "api_connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bharani",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "file-url": "^2.0.2",
+    "rsj": "0.0.4",
+    "xml2js": "^0.4.19"
+  }
+}

@@ -1,0 +1,64 @@
+var http = require('http')
+var fs   = require('fs')
+var url  = require('url')
+var path = require('path')
+
+console.log(__dirname)
+console.log(fs.existsSync())
+
+var server = http.createServer(function(request,response) {
+	
+console.log(request.url)
+   if(request.url === '/login'){
+
+     
+
+       fs.readFile("./public/WelcomePage.htm", "UTF-8", function(err, pageResp) {
+       	     
+             if(request.url.match("\.PNG$")) {
+                  	console.log('................///////')
+                	var pngPath = path.join(__dirname,"public",request.url)
+                 console.log(pngPath)
+     	        var filestream = fs.createReadStream(pngPath,"UTF-8")
+               	response.writeHead(200,{"Content-Type" : "image/png"})
+     	         filestream.pipe(response)
+                }
+
+             if(err){
+             	 response.writeHead(404, { 'Content-Type' : 'text/html'})
+             	 response.write('Page Not Found')
+             }
+             else{
+
+             	response.writeHead(200, { 'Content-Type' : 'text/html'})
+             	response.write(pageResp)
+             }
+
+              response.end()
+              console.log('................')
+       })
+
+   }
+     else if(request.url.match("\.png$")) {
+     	console.log('................///////')
+     	var pngPath = path.join(__dirname,"public",request.url)
+     	console.log(pngPath)
+     	var filestream = fs.createReadStream(pngPath,"UTF-8")
+     	response.writeHead(200,{"Content-Type" : "image/png"})
+     	filestream.pipe(response)
+     	console.log('................///////')
+     }
+     else{
+
+     	response.writeHead(200, { 'Content-Type' : 'text/html'})
+     	response.write('Page Not Found')
+     	response.end()
+     }
+
+     
+
+})
+
+server.listen(5050)
+
+console.log('Server Started listening on 5050');

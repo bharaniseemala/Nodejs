@@ -1,0 +1,15 @@
+{
+  "name": "cloudant",
+  "version": "1.0.0",
+  "description": "To connect with CloudantDB on IBM Cloud and operate insert,update,delete,retrive operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bharani",
+  "license": "ISC",
+  "dependencies": {
+    "@cloudant/cloudant": "^2.2.0",
+    "join": "^3.0.0"
+  }
+}

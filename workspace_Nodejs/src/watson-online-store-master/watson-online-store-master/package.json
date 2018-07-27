@@ -1,0 +1,17 @@
+{
+  "name": "watson-online-store-master",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/IBM/watson-online-store.svg?branch=master)](https://travis-ci.org/IBM/watson-online-store)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bharani",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  }
+}

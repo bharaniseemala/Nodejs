@@ -1,0 +1,11 @@
+{
+  "name": "ibm_cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "create-cat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bharani",
+  "license": "ISC"
+}

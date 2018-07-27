@@ -1,0 +1,16 @@
+/*********** Input.txt: Tutorials Point is giving self learning content
+             to teach the world in simple and easy way!!!!! ***********/
+
+var fs = require("fs");
+
+var data = fs.readFileSync('input.txt');
+
+console.log(data.toString());
+console.log("Program Ended");
+
+/*********** Output: Tutorials Point is giving self learning content
+             to teach the world in simple and easy way!!!!!
+             Program Ended *****************/
+/***********a blocking program executes very much in sequence. From the programming point of view, 
+            it is easier to implement the logic but non-blocking programs do not execute in sequence. In case a program needs to use any data to be processed, 
+            it should be kept within the same block to make it sequential execution.**********/

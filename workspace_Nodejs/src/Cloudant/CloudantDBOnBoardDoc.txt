@@ -1,0 +1,22 @@
+//cloudant is deprecated
+
+npm install @cloudant/cloudant --save => require('@cloudant/cloudant')
+
+//to tect conenctivity or run node connectiveity.js which is present in the same folder
+
+node -e 'require("cloudant"); console.log("Cloudant works");'
+
+//Initilization
+
+Cloudant => to load the package
+cloudant => to connect to loaded package
+
+Cloudant({account:me, password:password});
+
+var cloudant = Cloudant("https://MYUSERNAME:MYPASSWORD@MYACCOUNT.cloudant.com");
+
+var cloudant = Cloudant({instanceName: 'foo', vcapServices: JSON.parse(process.env.VCAP_SERVICES)});
+                   -- if node is running on Bluemix use VCAP_SERVICES to connect
+
+
+

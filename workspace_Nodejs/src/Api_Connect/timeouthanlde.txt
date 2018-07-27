@@ -1,0 +1,21 @@
+About both Get and Post methods:
+
+The timeout can occur as a socket disconnect, so you must register its handler like:
+
+request.on('socket', function (socket) {
+        socket.setTimeout( self.timeout );
+        socket.on('timeout', function() {
+            request.abort();
+            if(timeout) return timeout( new Error('request timed out') );
+        });
+    });
+while the request handler is
+
+       request.on('timeout', function () {
+          // Timeout happend. Server received request, but not handled it
+          // (i.e. doesn't send any response or it took to long).
+          // You don't know what happend.
+          // It will emit 'error' message as well (with ECONNRESET code).
+          req.abort();
+          if(timeout) return timeout( new Error('request timed out') );
+        });
