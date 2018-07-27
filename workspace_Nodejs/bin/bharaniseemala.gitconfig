@@ -1,0 +1,11 @@
+[gui]
+	recentrepo = C:/Users/532661/Downloads
+[user]
+	name = Bharani
+	email = bharani.venky2604@gmail.com
+[http]
+    proxy = http://proxy.cognizant.com:6050/
+    sslverify = false
+[https]
+    proxy = http://proxy.cognizant.com:6050
+    sslverify = false

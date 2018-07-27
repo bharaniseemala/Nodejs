@@ -1,0 +1,15 @@
+{
+  "name": "retialerconnentprojectpackage_v1",
+  "version": "1.0.0",
+  "description": "APIManagement system for retailer connect api's",
+  "main": "index1.js",
+  "scripts": {
+    "start": "node index1.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bharani",
+  "license": "ISC",
+  "dependencies": {
+    "express-gateway": "^1.7.3"
+  }
+}
